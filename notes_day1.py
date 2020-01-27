@@ -44,6 +44,7 @@ to_decimal(str, 2)
 
 # 255 = 0b1111 1111 = 0xFF (hexadecimal)
 # 1 + 2 + 4 + 8 = 15 (-> 'F' in hexadecimal values)
+# 255 is the highest number that you can represent using bits
 
 # Use this print statement to check your binary->decimal conversions
 # print(f"{x}")
