@@ -46,8 +46,47 @@ to_decimal(str, 2)
 # 1 + 2 + 4 + 8 = 15 (-> 'F' in hexadecimal values)
 # 255 is the highest number that you can represent using bits
 
-# Use this print statement to check your binary->decimal conversions
-# print(f"{x}")
+# In general, the `.format` method is considered more modern than the printf `%`
+# operator.
 
-# Use this print statement to check your decimal->binary conversions
-# print (f"{x:x}")
+x = 123
+
+# Printing a value as decimal
+
+print(x)                     # 123
+print("%d" % x)              # 123
+print("{:d}".format(x))      # 123
+
+# Printing a value as hex
+
+print(hex(x))                # 0x7b
+print("%x" % x)              # 7b
+print("%X" % x)              # 7B
+print("%04X" % x)            # 007B
+print("{:x}".format(x))      # 7b
+print("{:X}".format(x))      # 7B
+print("{:04x}".format(x))    # 007b
+
+# Printing a value as binary
+
+print("{:b}".format(x))      # 1111011, format method
+
+# Converting a decimal number in a string to a value
+
+s = "1234"; # 1234 is 0x4d2
+x = int(s); # Convert base-10 string to value
+
+# Printing a value as decimal and hex
+
+print(x)                     # 1234
+print("{:x}".format(x))      # 4d2
+
+# Converting a binary number in a string to a value
+
+s = "100101"   # 0b100101 is 37 is 0x25
+x = int(s, 2)  # Convert base-2 string to value
+
+# Printing a value as decimal and hex
+
+print(x)                     # 37
+print("{:x}".format(x))      # 25
